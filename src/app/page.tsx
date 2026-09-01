@@ -34,7 +34,7 @@ export default function Home() {
               <a
                 key={item.href}
                 href={item.href}
-                className="text-[13px] text-muted-foreground transition-colors hover:text-foreground"
+                className="text-sm text-muted-foreground transition-colors hover:text-foreground"
               >
                 {item.label}
               </a>
@@ -188,7 +188,7 @@ export default function Home() {
                 variant="outline"
                 render={<a href={`mailto:${site.email}`} />}
               >
-                <span className="font-mono text-[13px]">{site.email}</span>
+                <span className="font-mono text-xs">{site.email}</span>
               </Button>
             </div>
           </div>
