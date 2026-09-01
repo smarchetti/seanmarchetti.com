@@ -1,0 +1,181 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-01T00:00:00Z",
+  "title": "Design System: seanmarchetti.com",
+  "extensions": {
+    "colorMeta": {
+      "ink-ground": {
+        "role": "neutral",
+        "displayName": "Ink Ground",
+        "canonical": "#0a0a0a",
+        "tonalRamp": ["#0a0a0a", "#161616", "#1a1a1a", "#262626", "#444444", "#666666", "#a1a1a1", "#ededed"]
+      },
+      "ink-foreground": {
+        "role": "primary",
+        "displayName": "Ink Foreground",
+        "canonical": "#ededed",
+        "tonalRamp": ["#0a0a0a", "#161616", "#1a1a1a", "#262626", "#444444", "#666666", "#a1a1a1", "#ededed"]
+      },
+      "muted-text": {
+        "role": "neutral",
+        "displayName": "Muted Text",
+        "canonical": "#a1a1a1",
+        "tonalRamp": ["#0a0a0a", "#161616", "#1a1a1a", "#262626", "#444444", "#666666", "#a1a1a1", "#ededed"]
+      },
+      "hover-fill": {
+        "role": "neutral",
+        "displayName": "Hover Fill",
+        "canonical": "#1a1a1a",
+        "tonalRamp": ["#0a0a0a", "#161616", "#1a1a1a", "#262626", "#444444", "#666666", "#a1a1a1", "#ededed"]
+      },
+      "muted-fill": {
+        "role": "neutral",
+        "displayName": "Muted Fill",
+        "canonical": "#161616",
+        "tonalRamp": ["#0a0a0a", "#161616", "#1a1a1a", "#262626", "#444444", "#666666", "#a1a1a1", "#ededed"]
+      },
+      "hairline": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "#262626",
+        "tonalRamp": ["#0a0a0a", "#161616", "#1a1a1a", "#262626", "#444444", "#666666", "#a1a1a1", "#ededed"]
+      },
+      "vercel-blue": {
+        "role": "utility",
+        "displayName": "Vercel Blue",
+        "canonical": "#0070f3",
+        "tonalRamp": ["oklch(25% 0.14 252)", "oklch(35% 0.17 252)", "oklch(45% 0.19 252)", "oklch(55% 0.2 252)", "oklch(62% 0.2 252)", "oklch(72% 0.15 252)", "oklch(84% 0.09 252)", "oklch(94% 0.03 252)"]
+      },
+      "signal-red": {
+        "role": "utility",
+        "displayName": "Signal Red",
+        "canonical": "#ff6166",
+        "tonalRamp": ["oklch(25% 0.1 20)", "oklch(35% 0.14 20)", "oklch(45% 0.17 20)", "oklch(55% 0.19 20)", "oklch(65% 0.19 20)", "oklch(75% 0.14 20)", "oklch(85% 0.08 20)", "oklch(95% 0.03 20)"]
+      },
+      "paper-ground": {
+        "role": "neutral",
+        "displayName": "Paper Ground (light scheme)",
+        "canonical": "#ffffff",
+        "tonalRamp": ["#171717", "#444444", "#666666", "#a1a1a1", "#d4d4d4", "#eaeaea", "#f5f5f5", "#ffffff"]
+      },
+      "paper-foreground": {
+        "role": "neutral",
+        "displayName": "Paper Foreground (light scheme)",
+        "canonical": "#171717",
+        "tonalRamp": ["#171717", "#444444", "#666666", "#a1a1a1", "#d4d4d4", "#eaeaea", "#f5f5f5", "#ffffff"]
+      },
+      "paper-muted-text": {
+        "role": "neutral",
+        "displayName": "Paper Muted Text (light scheme)",
+        "canonical": "#666666",
+        "tonalRamp": ["#171717", "#444444", "#666666", "#a1a1a1", "#d4d4d4", "#eaeaea", "#f5f5f5", "#ffffff"]
+      },
+      "paper-hairline": {
+        "role": "neutral",
+        "displayName": "Paper Hairline (light scheme)",
+        "canonical": "#eaeaea",
+        "tonalRamp": ["#171717", "#444444", "#666666", "#a1a1a1", "#d4d4d4", "#eaeaea", "#f5f5f5", "#ffffff"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero headline only. Lowercase, tracking-tight, max-width 22ch, breakpoint-stepped 2.25rem/3rem/3.75rem." },
+      "headline": { "displayName": "Headline", "purpose": "Lowercase section headings (work, skills, contact). No kickers or eyebrows above them." },
+      "title": { "displayName": "Title", "purpose": "Role titles in work rows; company follows in Muted Text after a middle dot." },
+      "body": { "displayName": "Body", "purpose": "Summaries, highlights, prose in Muted Text; hero intro is the one 1rem body moment (max 60ch)." },
+      "label": { "displayName": "Label (Mono)", "purpose": "Geist Mono metadata: dates (en-dash ranges), locations, skill groups, footer colophon." }
+    },
+    "shadows": [],
+    "motion": [
+      { "name": "ease-enter", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Expo-out easing for the single orchestrated load-in." },
+      { "name": "duration-enter", "value": "700ms", "purpose": "Load-in rise (8px translate + fade), applied via .animate-enter." },
+      { "name": "stagger-enter", "value": "80ms", "purpose": "Per-element delay step via --enter-index custom property." },
+      { "name": "transition-state", "value": "colors, 150ms (Tailwind default)", "purpose": "Hover illumination on rows, links, and buttons; the only motion after load." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "lg", "value": "1024px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The single strongest element: white-on-black 'Get in touch'; renders as an anchor via Base UI's render prop.",
+      "html": "<button class=\"ds-btn ds-btn-primary\">Get in touch</button>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.375rem; height: 2rem; padding: 0 0.625rem; border: 1px solid transparent; border-radius: var(--radius, 0.375rem); font-family: 'Geist', ui-sans-serif, system-ui, sans-serif; font-size: 0.875rem; font-weight: 500; white-space: nowrap; user-select: none; cursor: pointer; transition: all 150ms; } .ds-btn:focus-visible { outline: none; border-color: var(--ring, #0070f3); box-shadow: 0 0 0 3px color-mix(in oklab, var(--ring, #0070f3) 50%, transparent); } .ds-btn:active { transform: translateY(1px); } .ds-btn-primary { background: var(--primary, #ededed); color: var(--primary-foreground, #0a0a0a); } .ds-btn-primary:hover { background: color-mix(in oklab, var(--primary, #ededed) 80%, transparent); }"
+    },
+    {
+      "name": "Ghost Button (external link)",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "GitHub/LinkedIn links: transparent at rest, Muted Fill on hover, trailing 16px arrow SVG in Muted Text.",
+      "html": "<button class=\"ds-btn ds-btn-ghost\">GitHub <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"ds-btn-ghost-icon\"><path d=\"M7 7h10v10\"/><path d=\"M7 17 17 7\"/></svg></button>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.375rem; height: 2rem; padding: 0 0.625rem; border: 1px solid transparent; border-radius: var(--radius, 0.375rem); font-family: 'Geist', ui-sans-serif, system-ui, sans-serif; font-size: 0.875rem; font-weight: 500; white-space: nowrap; user-select: none; cursor: pointer; transition: all 150ms; } .ds-btn:focus-visible { outline: none; border-color: var(--ring, #0070f3); box-shadow: 0 0 0 3px color-mix(in oklab, var(--ring, #0070f3) 50%, transparent); } .ds-btn:active { transform: translateY(1px); } .ds-btn-ghost { background: transparent; color: var(--foreground, #ededed); } .ds-btn-ghost:hover { background: var(--muted, #161616); } .ds-btn-ghost-icon { color: var(--muted-foreground, #a1a1a1); }"
+    },
+    {
+      "name": "Outline Button (email)",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "The contact email: hairline border on the ground, Geist Mono 13px label, Muted Fill on hover.",
+      "html": "<button class=\"ds-btn ds-btn-outline\"><span class=\"ds-btn-outline-mono\">sean.marchetti@gmail.com</span></button>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.375rem; height: 2rem; padding: 0 0.625rem; border: 1px solid transparent; border-radius: var(--radius, 0.375rem); font-family: 'Geist', ui-sans-serif, system-ui, sans-serif; font-size: 0.875rem; font-weight: 500; white-space: nowrap; user-select: none; cursor: pointer; transition: all 150ms; } .ds-btn:focus-visible { outline: none; border-color: var(--ring, #0070f3); box-shadow: 0 0 0 3px color-mix(in oklab, var(--ring, #0070f3) 50%, transparent); } .ds-btn:active { transform: translateY(1px); } .ds-btn-outline { border-color: var(--border, #262626); background: var(--background, #0a0a0a); color: var(--foreground, #ededed); } .ds-btn-outline:hover { background: var(--muted, #161616); } .ds-btn-outline-mono { font-family: 'Geist Mono', ui-monospace, monospace; font-size: 13px; font-weight: 400; }"
+    },
+    {
+      "name": "Work Row",
+      "kind": "custom",
+      "refersTo": "work-row",
+      "description": "The signature record row: mono metadata column left, role right; the row illuminates and the company name brightens on hover.",
+      "html": "<article class=\"ds-work-row\"><div class=\"ds-work-meta\"><p>Sep 2025 – present</p><p>New York, NY</p></div><div><h3 class=\"ds-work-title\">SVP of Engineering &amp; Head of Tech<span class=\"ds-work-company\"> · Red Ventures</span></h3><p class=\"ds-work-summary\">Leading product and platform engineering for The Points Guy.</p></div></article>",
+      "css": ".ds-work-row { display: grid; grid-template-columns: 10rem 1fr; gap: 1.5rem; padding: 1rem 0.75rem; border-radius: 0.3rem; transition: background-color 150ms; font-family: 'Geist', ui-sans-serif, system-ui, sans-serif; } .ds-work-row:hover { background: var(--secondary, #1a1a1a); } .ds-work-meta p { margin: 0; font-family: 'Geist Mono', ui-monospace, monospace; font-size: 0.75rem; line-height: 1.5rem; color: var(--muted-foreground, #a1a1a1); } .ds-work-title { margin: 0; font-size: 0.9375rem; font-weight: 500; line-height: 1.5rem; color: var(--foreground, #ededed); } .ds-work-company { color: var(--muted-foreground, #a1a1a1); transition: color 150ms; } .ds-work-row:hover .ds-work-company { color: var(--foreground, #ededed); } .ds-work-summary { margin: 0.5rem 0 0; font-size: 0.875rem; line-height: 1.625; color: var(--muted-foreground, #a1a1a1); }"
+    },
+    {
+      "name": "Header Nav",
+      "kind": "nav",
+      "description": "Sticky 3.5rem hairline header on a blurred translucent ground: wordmark left, three lowercase 13px links right.",
+      "html": "<header class=\"ds-nav\"><a href=\"#top\" class=\"ds-nav-wordmark\">sean marchetti</a><nav class=\"ds-nav-links\"><a href=\"#work\">work</a><a href=\"#skills\">skills</a><a href=\"#contact\">contact</a></nav></header>",
+      "css": ".ds-nav { display: flex; align-items: center; justify-content: space-between; height: 3.5rem; padding: 0 1.5rem; border-bottom: 1px solid var(--border, #262626); background: color-mix(in oklab, var(--background, #0a0a0a) 80%, transparent); backdrop-filter: blur(4px); font-family: 'Geist', ui-sans-serif, system-ui, sans-serif; } .ds-nav-wordmark { font-size: 0.875rem; font-weight: 500; letter-spacing: -0.025em; color: var(--foreground, #ededed); text-decoration: none; } .ds-nav-links { display: flex; align-items: center; gap: 1.5rem; } .ds-nav-links a { font-size: 13px; color: var(--muted-foreground, #a1a1a1); text-decoration: none; transition: color 150ms; } .ds-nav-links a:hover { color: var(--foreground, #ededed); } .ds-nav a:focus-visible { outline: 2px solid var(--ring, #0070f3); outline-offset: 2px; }"
+    },
+    {
+      "name": "Cross Mark",
+      "kind": "custom",
+      "description": "9px plus-mark placed at hairline intersections where section rules meet the column borders; the bordered canvas's signature.",
+      "html": "<div class=\"ds-cross-demo\"><span aria-hidden=\"true\" class=\"ds-cross\"></span></div>",
+      "css": ".ds-cross-demo { position: relative; width: 120px; height: 60px; border-top: 1px solid var(--border, #262626); border-left: 1px solid var(--border, #262626); } .ds-cross { position: absolute; left: -5px; top: -5px; width: 9px; height: 9px; color: var(--muted-foreground, #a1a1a1); pointer-events: none; } .ds-cross::before, .ds-cross::after { content: ''; position: absolute; background: currentColor; } .ds-cross::before { left: 0; right: 0; top: 4px; height: 1px; } .ds-cross::after { top: 0; bottom: 0; left: 4px; width: 1px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Resume as Clean Data",
+    "overview": "This is an engineering leader's record set like a Vercel product page. The world is a near-black canvas (#0a0a0a) carrying a single bordered center column; every structural line on the page is a 1px hairline, and plus-mark crosses sit at the intersections where section rules meet the column borders — the canvas reads as ruled paper for data, not as a decorated personal brand. Dark is the design's home (color-scheme: dark on :root); the light palette is the same hairline system re-inked on white and arrives only via prefers-color-scheme: light — there is no theme toggle.\n\nThe voice is lowercase and quiet: the headline, section headings, nav, and footer are all lowercase; dates, locations, and skill-group names sit in Geist Mono in a fixed metadata column. Color is almost entirely grayscale; one blue (#0070f3) exists and it is spent only on focus rings and text selection. Motion is a single orchestrated load-in — an expo-out rise with an 80ms stagger — and after that the page moves only in color.",
+    "keyCharacteristics": [
+      "Bordered 48rem center column with hairline rules and plus-mark crosses at intersections",
+      "Grayscale ladder on near-black; one blue reserved for focus and selection",
+      "Geist Sans for prose and headings, Geist Mono for metadata; lowercase display voice",
+      "Flat depth: no shadows anywhere; structure is drawn, not lifted",
+      "One motion event (staggered load-in); hover states change color only"
+    ],
+    "rules": [
+      { "name": "The One Blue Rule", "body": "#0070f3 appears only as a response to the visitor — focus rings and text selection. It is never decorative, never a link color, never a fill at rest.", "section": "colors" },
+      { "name": "The Illumination Rule", "body": "Hover means brightening, not moving: rows fill with Hover Fill, muted text rises to Ink Foreground. Nothing translates, scales, or casts a shadow on hover.", "section": "colors" },
+      { "name": "The Lowercase Rule", "body": "Display, headings, nav, and footer are lowercase. Buttons and content prose keep sentence case. No uppercase, no letterspaced small caps anywhere.", "section": "typography" },
+      { "name": "The Mono Margin Rule", "body": "Metadata lives in a fixed 10rem left column (sm: and up) set in Geist Mono xs Muted Text — the same grid in the work rows and the skills list. Dates use en dashes (\"Sep 2025 – present\"); prose uses Sean's lowercase em-dash voice.", "section": "typography" },
+      { "name": "The Cross Rule", "body": "Every hairline intersection where a section's top rule meets the column borders carries a plus-mark cross: 9px square, 1px strokes, Muted Text color, positioned −5px into the corner, aria-hidden and pointer-transparent. Crosses mark structure; they never appear detached from a hairline intersection.", "section": "layout" },
+      { "name": "The Drawn-Not-Lifted Rule", "body": "If a surface needs separation, draw a 1px Hairline border or shift its fill one step up the gray ladder. Never add a shadow.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do draw all structure with 1px Hairline borders and keep new sections inside the bordered 48rem column, opening with a hairline top rule and a <Crosses /> pair.",
+      "Do put every piece of metadata (dates, locations, categories) in Geist Mono 0.75rem Muted Text in the 10rem left column; use en dashes for ranges.",
+      "Do keep hover as illumination: fill one gray step up, brighten text to foreground.",
+      "Do reuse .animate-enter with --enter-index (80ms steps) for any new load-in content, and honor prefers-reduced-motion.",
+      "Do keep headings and nav lowercase, tracking-tight, standing alone."
+    ],
+    "donts": [
+      "Don't use box-shadows anywhere; separation is hairlines and tonal fills.",
+      "Don't spend Vercel Blue on anything but focus rings and selection — no blue links, fills, or accents at rest.",
+      "Don't introduce new hues, gradients, raster images, or icon sets beyond the inline arrow SVG; the world is the gray ladder plus its two utility colors.",
+      "Don't add kickers or eyebrow labels above headings, or uppercase letterspaced labels; this build's headings stand alone and its labels are lowercase mono.",
+      "Don't animate on scroll or move elements on hover; the motion budget is the single load-in plus color transitions (and the button's 1px press).",
+      "Don't round anything past 0.375rem or round non-interactive surfaces; the canvas stays square-cornered."
+    ]
+  }
+}

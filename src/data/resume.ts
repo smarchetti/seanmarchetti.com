@@ -1,5 +1,5 @@
-// All site content lives here. Remaining PLACEHOLDER entries: project list,
-// skills groups, role summaries/highlights, and the GitHub/LinkedIn URLs.
+// All site content lives here. Experience is real (LinkedIn, 2026-09).
+// Skills entries are provisional — Sean refines them directly in this file.
 
 export const site = {
   name: "Sean Marchetti",
@@ -10,7 +10,6 @@ export const site = {
   email: "sean.marchetti@gmail.com",
   location: "New York, NY",
   links: [
-    // PLACEHOLDER: confirm/replace profile URLs.
     { label: "GitHub", href: "https://github.com/smarchetti" },
     { label: "LinkedIn", href: "https://www.linkedin.com/in/seanmarchetti/" },
   ],
@@ -93,33 +92,10 @@ export const experience: Role[] = [
   },
 ];
 
-export type Project = {
-  name: string;
-  description: string;
-  tech: string[];
-  href?: string;
-};
-
-export const projects: Project[] = [
-  // PLACEHOLDER projects — replace with real work you want to show.
-  {
-    name: "Project one",
-    description:
-      "What it is, who it's for, and why you built it — two sentences at most.",
-    tech: ["TypeScript", "Next.js"],
-    href: "https://github.com/smarchetti",
-  },
-  {
-    name: "This site",
-    description:
-      "The site you're looking at — Next.js, Tailwind, and shadcn/ui, deployed on Vercel.",
-    tech: ["Next.js", "Tailwind", "shadcn/ui"],
-    href: "https://github.com/smarchetti/seanmarchetti.com",
-  },
-];
+// Projects section is intentionally absent until there are real projects to
+// show — add a `projects` export and its section in page.tsx when ready.
 
 export const skills: { group: string; items: string[] }[] = [
-  // PLACEHOLDER skills — refine groupings and items.
   {
     group: "Leadership",
     items: [
