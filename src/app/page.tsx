@@ -80,31 +80,42 @@ export default function Home() {
           <SectionHeading id="work">work</SectionHeading>
           <div className="mt-10 space-y-12">
             {experience.map((role) => (
-              <article key={`${role.company}-${role.start}`} className="grid gap-2 sm:grid-cols-[7rem_1fr] sm:gap-6">
-                <p className="font-mono text-xs leading-6 text-muted-foreground">
-                  {role.start} — {role.end}
-                </p>
+              <article key={`${role.company}-${role.start}`} className="grid gap-2 sm:grid-cols-[9rem_1fr] sm:gap-6">
+                <div>
+                  <p className="font-mono text-xs leading-6 text-muted-foreground">
+                    {role.start} — {role.end}
+                  </p>
+                  {role.location && (
+                    <p className="hidden font-mono text-xs leading-6 text-muted-foreground/70 sm:block">
+                      {role.location}
+                    </p>
+                  )}
+                </div>
                 <div>
                   <h3 className="text-base font-medium text-foreground">
                     {role.title}
                     <span className="text-muted-foreground"> · {role.company}</span>
                   </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                    {role.summary}
-                  </p>
-                  <ul className="mt-3 space-y-2">
-                    {role.highlights.map((highlight) => (
-                      <li
-                        key={highlight}
-                        className="flex gap-3 text-sm leading-relaxed text-foreground/80"
-                      >
-                        <span aria-hidden className="select-none text-primary">
-                          —
-                        </span>
-                        {highlight}
-                      </li>
-                    ))}
-                  </ul>
+                  {role.summary && (
+                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                      {role.summary}
+                    </p>
+                  )}
+                  {role.highlights && role.highlights.length > 0 && (
+                    <ul className="mt-3 space-y-2">
+                      {role.highlights.map((highlight) => (
+                        <li
+                          key={highlight}
+                          className="flex gap-3 text-sm leading-relaxed text-foreground/80"
+                        >
+                          <span aria-hidden className="select-none text-primary">
+                            —
+                          </span>
+                          {highlight}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </div>
               </article>
             ))}
@@ -156,7 +167,7 @@ export default function Home() {
           <SectionHeading id="skills">skills</SectionHeading>
           <dl className="mt-10 space-y-6">
             {skills.map((group) => (
-              <div key={group.group} className="grid gap-2 sm:grid-cols-[7rem_1fr] sm:gap-6">
+              <div key={group.group} className="grid gap-2 sm:grid-cols-[9rem_1fr] sm:gap-6">
                 <dt className="font-mono text-xs leading-6 text-muted-foreground">
                   {group.group.toLowerCase()}
                 </dt>
